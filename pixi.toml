@@ -1,0 +1,11 @@
+[workspace]
+authors = ["Byron"]
+channels = ["conda-forge"]
+name = "Advent-of-Code-Python"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.14.*"
