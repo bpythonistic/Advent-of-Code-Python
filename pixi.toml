@@ -6,7 +6,8 @@ platforms = ["win-64"]
 version = "0.1.0"
 
 [tasks]
-run-day1 = 'python puzzles\Day1\aoc_practice.py'
+run-day1 = 'python puzzles/Day1/aoc_practice.py'
+run-day2 = "python puzzles/Day2/aoc_day2.py"
 
 [dependencies]
 python = "3.14.*"
