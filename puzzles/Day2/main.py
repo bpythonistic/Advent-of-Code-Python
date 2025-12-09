@@ -57,7 +57,7 @@ def solve_puzzle1():
             digits = len(current_id)
             if digits % 2 != 0:
                 continue
-            if current_id[:digits // 2] == current_id[digits // 2 :]:
+            if current_id[: digits // 2] == current_id[digits // 2 :]:
                 invalid_ids.append(i)
     return sum(invalid_ids)
 
@@ -74,11 +74,18 @@ def solve_puzzle2():
             digits = len(current_id)
             for j in range(1, digits // 2 + 1):
                 if digits % j == 0:
-                    if all([current_id[n*j:(n + 1)*j] == current_id[(n + 1)*j:(n + 2)*j] for n in range(digits // j - 1)]):
+                    if all(
+                        [
+                            current_id[n * j : (n + 1) * j]
+                            == current_id[(n + 1) * j : (n + 2) * j]
+                            for n in range(digits // j - 1)
+                        ]
+                    ):
                         invalid_ids.append(i)
                         break
-    
+
     return sum(invalid_ids)
+
 
 if __name__ == "__main__":
     print(f"solution 1 = {solve_puzzle1()}")
